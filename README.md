@@ -133,12 +133,7 @@ Power BI dashboard includes:
 
 ---
 
-## 📷 7. Dashboard Preview  
-*(Add your dashboard image here)*  
-
----
-
-## 🧠 8. Skills Demonstrated  
+## 🧠 7. Skills Demonstrated  
 - API integration & JSON handling  
 - Data cleaning and transformation  
 - Text & engagement analytics  
