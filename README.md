@@ -1,144 +1,150 @@
-# 📊 YouTube Data Analytics using YouTube API  
-A complete end-to-end data analytics project where I extracted YouTube video data using the YouTube Data API, cleaned and processed it using Python, analyzed trends and engagement metrics, and finally visualized the insights through an interactive Power BI dashboard.
+# 📊 YouTube Analytics Dashboard using YouTube Data API  
+An end-to-end data analytics project analyzing **13 Travel Vlogger YouTube channels** using **YouTube API, Python, and Power BI**.
 
 ---
 
-## 🚀 1. Project Overview  
-YouTube is the world’s second-largest search engine, yet the factors that drive video performance are still widely debated. This project aims to understand how video characteristics—such as duration, tags, title length, and publishing time—affect engagement (views, likes, comments).
+## 🚀 Project Overview  
+This project focuses on extracting **real-time YouTube video data** from 13 well-known travel vloggers using the **YouTube Data API**, followed by cleaning, wrangling, EDA, insight generation, and dashboard creation.
 
-Using data from top data-science YouTube channels, this project answers key questions content creators care about:
-- What makes a video get more views?
-- Does duration matter?
-- Do likes and comments correlate with views?
-- What topics are trending?
-- How often should creators upload?
+The goal was to understand **what drives video performance**—factors like duration, publishing trends, keywords, subscriber influence, and engagement behavior.
 
 ---
 
-## 🎯 2. Aim & Objectives  
-
-### **Aim**
-To analyze YouTube video performance using YouTube API data and uncover patterns that influence viewer engagement.
-
-### **Objectives**
-- Understand and use the YouTube Data API to extract video metadata  
-- Clean, preprocess, and engineer features for analysis  
-- Explore patterns related to:
-  - Views vs likes/comments
-  - Video duration performance
-  - Title length and tags  
-  - Upload frequency and timing  
-- Analyze trending topics using text analysis  
-- Build a Power BI dashboard to visually communicate insights  
+## 🧠 Key Objectives  
+- Extract structured data using the **YouTube Data API**  
+- Perform **data cleaning, transformation, and feature engineering**  
+- Conduct **exploratory data analysis (EDA)** in Python  
+- Visualize performance metrics using an **interactive Power BI dashboard**  
+- Identify patterns behind **high-performing videos**  
 
 ---
 
-## 🗂️ 3. Dataset  
-Data was collected from **10–15 top Data Science channels**, including:  
-- Video metadata  
-- Channel details  
-- Tags  
-- Comments  
-- Engagement metrics (views, likes, comments)
+## 📂 Dataset  
+The dataset consists of API-extracted metadata from **13 travel vloggers**, including:
 
-### **Key Fields**
-- `video_id`, `title`, `description`
-- `duration`
-- `tags`
-- `publish_time`
-- `view_count`, `like_count`, `comment_count`
-- `topic_categories`
+- Channel name  
+- Video title & description  
+- Published date  
+- Duration (seconds)  
+- Views, Likes, Comments  
+- Subscriber count  
+- Tags & keywords  
+- Engagement ratio  
+- Category & channel trends  
 
----
-
-## 🛠️ 4. Tools & Technologies  
-
-| Area | Tools |
-|------|-------|
-| Data Extraction | YouTube Data API, Python (requests) |
-| Data Cleaning & EDA | Python (Pandas, NumPy, Matplotlib, Seaborn) |
-| Text Analysis | NLTK, WordCloud |
-| Data Storage | CSV & local storage |
-| Dashboard | Power BI |
-| Transformations | DAX Measures & Calculated Columns |
+All data was fetched using Python scripts and stored as CSV for analysis.
 
 ---
 
-## 🔍 5. Project Steps  
-
-### **5.1 Data Extraction using YouTube API**
-- Created API key  
-- Built functions to fetch playlists, videos, comments  
-- Handled pagination using `nextPageToken`  
-- Stored extracted metadata into structured CSV files  
-
-### **5.2 Data Cleaning & Feature Engineering (Python)**
-- Converted ISO-8601 duration into seconds  
-- Cleaned tags, removed stopwords  
-- Created new columns:
-  - `title_length`
-  - `tag_count`
-  - `duration_minutes`
-  - `publish_day`, `publish_hour`
-- Processed missing values and normalized numeric fields  
-
-### **5.3 Exploratory Data Analysis (EDA)**
-Key insights explored:
-- Correlation between view count & user interaction  
-- Optimal video duration range  
-- Impact of title length  
-- Upload frequency of top creators  
-- Topic trends via NLP  
-  - WordClouds for titles  
-  - Most common tags  
-  - Comment themes  
-
-### **5.4 Power BI Data Model**
-Connected the cleaned dataset into Power BI and created:
-
-#### **Calculated Columns**
-- **Engagement Score**
-- **Performance Category**
-- **Upload Time Band (e.g., 12–3 PM)**  
-- **Channel-wise Category**
-
-#### **DAX Measures**
-- `Total Views`
-- `Total Likes`
-- `Like-to-View Ratio`
-- `Average Duration`
-- `Top Performing Tags`
-- `Views per Minute`
-
-### **5.5 Dashboard Development**
-Power BI dashboard includes:
-- 📌 **Overview Page** – Summary KPIs  
-- 📊 **Channel Comparison** – Engagement, upload trends  
-- ⏱️ **Duration Analysis** – Ideal video length  
-- 🔥 **Trending Topics** – Word clouds & tag frequency  
-- 📅 **Publishing Patterns** – Optimal upload time  
-- 🎯 **Video Performance Insight** – Scatter & bar charts  
+## 🛠️ Tech Stack  
+- **Python** (Requests, Pandas, NumPy)  
+- **YouTube Data API v3**  
+- **Power BI**  
+- **Jupyter Notebook**  
+- **GitHub**  
 
 ---
 
-## 📌 6. Key Insights  
+## 🧩 Project Workflow  
 
-- Videos between **8–12 minutes** showed the highest engagement  
-- Strong positive correlation between **likes**, **comments**, and **views**  
-- Uploading consistently boosts overall channel traction  
-- Titles with **medium length (6–10 words)** performed best  
-- Specific keywords in titles appear more often in high-performing videos  
-- Peak publishing window found between **6 PM – 10 PM**  
-- NLP shows trending topics like *Python, ML, Roadmap, Projects*  
+### **1️⃣ Data Extraction (API)**  
+- Used `requests` to query the YouTube API  
+- Collected metadata for 13 channels  
+- Stored raw JSON responses → converted to CSV  
+
+### **2️⃣ Data Cleaning & Transformation (Python)**  
+- Removed duplicates and missing values  
+- Created derived metrics:
+  - Engagement Rate  
+  - View-to-Subscriber Ratio  
+  - Duration Bins  
+  - Published Time Buckets  
+- Standardized category and keyword fields  
+
+### **3️⃣ Exploratory Data Analysis (Python)**  
+Performed detailed EDA to uncover patterns:  
+- Which travel vloggers get the highest engagement  
+- Does video duration affect performance?  
+- Do specific keywords (like “budget”, “adventure”, “solo trip”) attract more views?  
+- Posting trends by weekday & hour  
+- Correlation between subscribers & video performance  
+
+### **4️⃣ Interactive Power BI Dashboard**  
+Features include:  
+- Channel Insights Overview  
+- Top 10 Videos  
+- Engagement Trends  
+- Duration vs Views Scatter  
+- Publishing Time Effect  
+- Keyword/Tag Analysis  
+- Subscriber Growth Indicators  
+
+### **5️⃣ Insights Summary**  
+Some highlights (based on your EDA steps):  
+- Mid-duration videos (8–12 mins) had the highest views  
+- Weekend uploads showed stronger engagement  
+- Videos with destination-focused keywords performed better  
+- High-subscription channels didn’t always guarantee high views → content relevance matters  
+- Tags related to “travel tips”, “budget travel”, “vlog series” drove more engagement  
 
 ---
 
-## 🧠 7. Skills Demonstrated  
-- API integration & JSON handling  
-- Data cleaning and transformation  
-- Text & engagement analytics  
-- Python scripting for automation  
-- Power BI data modeling & DAX  
-- Dashboard storytelling  
-- Analytical thinking & trend identification  
+## 📁 Project Structure  
 
+```
+youtube-analytics-project/
+│── data/
+│ ├── raw_api_data.json
+│ ├── cleaned_youtube_data.csv
+│
+│── scripts/
+│ ├── extract_youtube_data.py
+│ ├── data_cleaning.ipynb
+│ ├── eda_analysis.ipynb
+│
+│── dashboard/
+│ ├── youtube_analytics_dashboard.pbix
+│
+│── assets/
+│ ├── project_thumbnail.png
+│
+│── README.md
+```
+
+---
+
+## 🧪 How to Run This Project
+
+```bash
+# 1. Install Dependencies
+pip install -r requirements.txt
+
+# 2. Add your API key
+# Open the extract script and set:
+API_KEY = "YOUR_API_KEY"
+
+# 3. Run the extraction script
+python extract_youtube_data.py
+
+# 4. Open Power BI Dashboard
+# Open the file: youtube_analysis.pbix
+```
+
+---
+
+## 🎯 What You Will Learn
+- API-driven data collection  
+- Real-world data cleaning & EDA  
+- Insights storytelling  
+- Dashboard development in Power BI  
+- YouTube analytics fundamentals
+
+---
+
+## 🤝 Contact
+
+**T Shalini Patra**  
+
+📧 tshalinipatra@gmail.com
+📱 +91 9348207149
+🔗 GitHub: https://github.com/Shalini-patra
