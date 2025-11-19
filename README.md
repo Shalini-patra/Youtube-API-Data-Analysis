@@ -93,6 +93,9 @@ Some highlights (based on your EDA steps):
 
 ```
 youtube-analytics-project/
+│── assets/
+│ ├── project_thumbnail.png
+│
 │── dashboard/
 │ ├── YT analysis dashborad - (1000 rows sample).pbix
 │ ├── report pages .pdf
@@ -103,9 +106,6 @@ youtube-analytics-project/
 │
 │── python scripts/
 │ ├── Youtube_API_data_Analysis.ipynb
-│
-│── assets/
-│ ├── project_thumbnail.png
 │
 │── README.md
 ```
