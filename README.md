@@ -93,17 +93,16 @@ Some highlights (based on your EDA steps):
 
 ```
 youtube-analytics-project/
-│── data/
-│ ├── raw_api_data.json
-│ ├── cleaned_youtube_data.csv
-│
-│── scripts/
-│ ├── extract_youtube_data.py
-│ ├── data_cleaning.ipynb
-│ ├── eda_analysis.ipynb
-│
 │── dashboard/
-│ ├── youtube_analytics_dashboard.pbix
+│ ├── YT analysis dashborad - (1000 rows sample).pbix
+│ ├── report pages .pdf
+│
+│── data/
+│ ├── channel_data.csv
+| ├── video_stats.csv
+│
+│── python scripts/
+│ ├── Youtube_API_data_Analysis.ipynb
 │
 │── assets/
 │ ├── project_thumbnail.png
